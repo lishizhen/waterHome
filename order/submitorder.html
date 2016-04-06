@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>提交订单</title>
+    <link rel="stylesheet" href="../css/mui.min.css" />
+    <link rel="stylesheet" href="../iconfont/iconfont.css" />
+    <link rel="stylesheet" href="../css/mui.listpicker.css" />
+    <link rel="stylesheet" href="../css/mui.poppicker.css" />
+    <link rel="stylesheet" href="../css/css.css" />
+    <script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui/mui.listpicker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/myjs.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="order submitorder"> 
+		<header class="mui-bar mui-bar-nav myheader">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			    <h1 class="mui-title">提交订单</h1>
+		</header>
+		<div class="sendPeople mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="../my/editshr.html">
+						<p class='mui-ellipsis'>收货人:<span>李女士</span><span class="telphone">13421100078</span></p>
+						<p class='mui-ellipsis'>地址：<span>首城景华国际b座807</span></p>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view marginT orderCon clearfix">
+				<!--<li class="mui-table-view-divider"></li>-->
+				<li class="mui-table-view-cell orderTime">					
+					<em>农夫山泉</em><p><span class="date">2015/08/12</span><span class="time">16:00:00</span></p>			
+				</li>
+				<li class="mui-table-view-cell mui-media orderxq">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/02.png">
+						<div class="mui-media-body">
+							农夫山泉桶装水18L
+							<span><em class="smallyuan">&yen;</em>13</span>
+							<span class="num"> </span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media orderxq">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/02.png">
+						<div class="mui-media-body">
+							农夫山泉桶装水18L
+							<span><em class="smallyuan">&yen;</em>13</span>
+							<span class="num"> × 1</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media orderxq">
+					<a href="javascript:;">
+						<div class="mui-media-body yatong_a">
+							<b id="yatongservice">
+								押水桶
+								<em class="yashui"><i class="icon iconfont">&#xe604;</i></em>
+							</b>
+							<span class="money"><em class="smallyuan">&yen;</em>13</span>
+							<span class="num yuan"><em class="lvjia">+</em> </span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell"></li>				
+				<li class="mui-table-view-cell orderpay">					
+						<p class="orderTime">订单合计: <span class="money colred"> <em class="smallyuan colred">&yen;</em>17.5</span></p>					
+				</li>
+			</ul>
+
+			<ul class="mui-table-view mui-table-view-chevron liji">
+				<li class="mui-table-view-cell pstime">
+					<a class="mui-navigate-right">
+						<span class="mui-badge">立即配送</span>
+						配送时间
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view bill">
+				  <li class="mui-table-view-cell">
+				    <a class="mui-navigate-right" href="../my/fapiaott.html">
+				      发票抬头
+				    </a>
+				  </li>
+				  <li class="mui-table-view-cell">
+				    <a class="mui-navigate-right">
+				      备注
+				    </a>
+				  </li>
+			</ul>
+			<ul class="mui-table-view mui-table-view-chevron liji">
+				<li class="mui-table-view-cell">	
+						<span class="mui-badge">本次使用1张，还剩7张</span>
+
+					 <a class="mui-navigate-right" href="../my/mywaterticket.html">
+					水票使用
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+				    <a class="mui-navigate-right" href="../my/yhq.html">
+				      优惠券
+				    </a>
+			</ul>
+			
+			<ul class="gong">
+				<li class="mui-table-view-cell">
+					共<span class="colred jg"><em class="smallyuan colred">&yen;</em>13</span>		
+					<button type="button" class="mui-btn mui-btn-primary" onclick="window.location.href='pay.html'">去结算</button>
+				</li>
+			</ul>			
+		</div>
+	</div>
+	<script>
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					var arr=[
+								[
+									{value: 'ywj',text: '08:00-8:30'}, 
+									{value: 'aaa',text: '08:30-9:00'}, 
+									{value: 'lj',text: '09:00-9:30'}, 
+									{value: 'lj',text: '09:30-10:00'},
+									{value: 'lj',text: '10:00-10:30'},
+									{value: 'lj',text: '10:30-11:00'},
+									{value: 'lj',text: '11:00-11:30'},
+									{value: 'lj',text: '11:30-12:00'},
+									{value: 'lj',text: '一小时内送达'},
+									{value: 'lj',text: '12:00-12:30'},
+									{value: 'lj',text: '12:30-13:00'},
+									{value: 'lj',text: '13:00-13:30'},
+									{value: 'lj',text: '13:30-14:00'},
+									{value: 'lj',text: '14:00-14:30'},
+									{value: 'lj',text: '14:30-15:00'},
+									{value: 'lj',text: '15:00-15:30'},
+									{value: 'lj',text: '15:30-16:00'},
+									{value: 'lj',text: '16:00-16:30'},
+									{value: 'lj',text: '16:30-17:00'},
+									{value: 'lj',text: '17:00-17:30'},
+									{value: 'lj',text: '17:30-18:00'},
+									{value: 'lj',text: '18:00-18:30'},
+								]
+						
+						];
+					$(".pstime ").each(function(i,item){
+						var userPicker = new $.PopPicker();
+						userPicker.setData(arr[i]);
+						this.addEventListener("tap",function(event){
+						var s = this;
+						/*console.log(s);
+						console.log($);*/
+						userPicker.show(function(items) {
+							/*s.innerText = items[0].text;*/
+							jQuery(s).find("span").html(items[0].text);
+							});
+						}, false);					
+					});
+				});
+			})(mui, document);
+		</script>	
+</body>
+</html>

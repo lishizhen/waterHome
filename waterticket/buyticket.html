@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>购买水票</title>
+    <link rel="stylesheet" href="../css/mui.min.css" />
+    <link rel="stylesheet" href="../iconfont/iconfont.css" />
+    <link rel="stylesheet" href="../css/css.css" />
+    <script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/myjs.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="buyTicket">
+		<header class="mui-bar mui-bar-nav myheader">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			    <h1 class="mui-title">购买</h1>
+		</header>
+		<!--
+        	轮播图开始
+        -->
+		<div class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../images/banner1.png">
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../images/banner1.png">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../images/banner1.png">
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../images/banner1.png">
+						</a>
+					</div>
+
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../images/banner1.png">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+		</div>		
+		<!--
+        	轮播图结束
+        -->
+        <div class="buyTicket_title">
+        	<h2>雀巢纯天然桶装水 <span>18.5L</span></h2>        	
+			<form class="mui-input-group">
+				<div class="mui-input-row mui-radio">	
+					<p class="jg"><em class="zhongwen">&yen;</em>10 </p>
+					<label>雀巢10元特惠券</label>
+					<input name="radio1" type="radio">
+				</div>
+				<div class="mui-input-row mui-radio">	
+					<p class="jg"><em class="zhongwen">&yen;</em>103 </p>
+					<label>雀巢20元特惠券</label>
+					<input name="radio1" type="radio">
+				</div>
+				<div class="mui-input-row mui-radio">	
+					<p class="jg"><em class="zhongwen">&yen;</em>430 </p>
+					<label>雀巢30元特惠券</label>
+					<input name="radio1" type="radio">
+				</div>
+			</form>
+        </div>
+	    <div class="buyTicket_con">
+	    	<ul class="mui-table-view">
+			  	<li class="mui-table-view-cell">
+				    <a class="mui-navigate-right" href="../my/shuihm.html">
+				      优惠券
+				    </a>
+			  	</li>
+			</ul>
+	    </div>
+	            <!--商品详情底部开始-->
+        <div class="goods_detail_bottom">
+        	<nav class="mui-bar mui-bar-tab clearfix">
+        		<div class="goods_detail_bottom_l">
+        			<p class="jg"> <span>共</span><em class="zhongwen">&yen;</em>430 </p>
+        		</div>
+        		<div class="goods_detail_bottom_r">
+					<a class="mui-navigate-right" href="../order/pay.html">
+					去结算
+					</a>
+        		</div> 				
+			</nav>
+        </div>
+        <!--商品详情底部结束-->
+	</div>
+</body>
+</html>

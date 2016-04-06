@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>新建收货人</title>
+    <link rel="stylesheet" href="../css/mui.min.css" />
+    <link rel="stylesheet" href="../iconfont/iconfont.css" />
+    <link rel="stylesheet" href="../css/mui.listpicker.css" />
+    <link rel="stylesheet" href="../css/mui.poppicker.css" />
+    <link rel="stylesheet" href="../css/css.css" />
+    <script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui/mui.listpicker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/myjs.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="editshrMain">
+		<header class="mui-bar mui-bar-nav myheader">
+			    <button class="mui-btn mui-btn-link mui-btn-nav mui-pull-left mui-action-back">
+			    	<span class="mui-icon mui-icon-left-nav"></span>
+			  	</button>
+			  	<button class="mui-btn mui-btn-link mui-btn-nav mui-pull-right">
+			  		保存
+			   		<span class="mui-icon mui-icon-right-nav"></span>
+			 	 </button>
+
+			    <h1 class="mui-title">新建收货人</h1>
+		</header>
+		<!--意见反馈主体开始-->
+		<div class="editshr_main mui-content">			
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>收货人姓名</label>
+					<input type="text">
+				</div>
+				<div class="mui-input-row">		
+					<label>联系方式</label>
+					<input type="text">
+				</div>
+				<div class="mui-input-row addressQu">
+					<a href="#" class="mui-navigate-right">
+						<label>区/县</label>
+						<input type="text" />
+					</a>
+				</div>
+				<div class="mui-input-row addressQu">
+					<a href="#" class="mui-navigate-right">
+						<label>商业圈</label>
+						<input type="text">
+					</a>
+				</div>
+				<div class="mui-input-row addressQu">
+					<a href="#" class="mui-navigate-right">
+						<label>小区</label>
+						<input type="text">
+					</a>
+				</div>
+				<div class="mui-input-row">
+					<label>详细地址</label>
+					<textarea rows="5" placeholder=""></textarea>
+				</div>
+			</form>
+		</div>
+		<div class="aginbuy clearfix" style="margin-top:30px">
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block">退桶</button>
+		</div>
+		<!--意见反馈主体结束-->		
+	</div>
+		<script>
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					var arr=[
+								[
+									{value: 'ywj',text: '东城区'}, 
+									{value: 'aaa',text: '西城区'}, 
+									{value: 'lj',text: '崇文区'}, 
+									{value: 'lj',text: '宣武区'},
+									{value: 'lj',text: '朝阳区'},
+									{value: 'lj',text: '海淀区'},
+									{value: 'lj',text: '丰台区'},
+									{value: 'lj',text: '石景山区'},
+									{value: 'lj',text: '房山区'},
+									{value: 'lj',text: '通州区'},
+									{value: 'lj',text: '顺义区'},
+									{value: 'lj',text: '大兴区'},
+									{value: 'lj',text: '昌平区'},
+									{value: 'lj',text: '平谷区'},
+									{value: 'lj',text: '怀柔区'},
+									{value: 'lj',text: '门头沟区'},
+									{value: 'lj',text: '密云县'},
+									{value: 'lj',text: '延庆县'}
+								],
+								[
+									{value: 'ywj',text: '西二旗新村店'}, 
+									{value: 'aaa',text: '三旗百汇店'}, 
+									{value: 'lj',text: '三旗百汇店'}, 
+									{value: 'lj',text: '三旗百汇店'}									
+								],
+								[
+									{value: 'ywj',text: '融泽家园6号'}, 
+									{value: 'aaa',text: '融泽家园5号'}, 
+									{value: 'lj',text: '融泽家园4号'}, 
+									{value: 'lj',text: '融泽家园3号'}									
+								]	
+						];
+					$(".addressQu ").each(function(i,item){
+						var userPicker = new $.PopPicker();
+						userPicker.setData(arr[i]);
+						this.addEventListener("tap",function(event){
+						var s = this;
+						/*console.log(s);
+						console.log($);*/
+						userPicker.show(function(items) {
+							jQuery(s).find("input").val(items[0].text);
+							});
+						}, false);					
+					});
+				});
+			})(mui, document);
+		</script>
+</body>
+</html>

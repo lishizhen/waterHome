@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>购物车清单</title>
+    <link rel="stylesheet" href="../css/mui.min.css" />
+    <link rel="stylesheet" href="../iconfont/iconfont.css" />
+    <link rel="stylesheet" href="../css/category.css" />
+    <link rel="stylesheet" href="../css/css.css" />
+    <style>
+	    	body {
+	    		background: #fff;
+	    		font-family: "microsoft yahei"
+	    	}
+			.buywaterMain .mui-popover p {
+				text-indent: 22px;
+			}
+			span.mui-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			.mui-bar-tab {z-index: 999;}
+			.mui-popover {
+				height: 300px;
+				width: 100%;
+				bottom: 49px !important;
+				left: 0 !important;
+				right: 0 !important;
+				border-radius: 0;
+				-webkit-border-radius: 0;
+				position: fixed !important;
+				z-index: 998;
+			}
+			.mui-backdrop {z-index: 996;}
+			.buywaterMain .mui-content {
+				/*padding: 60px 0 40px 0;*/
+			}
+			.gwc .mui-table-view-cell,.gong .mui-table-view-cell>.mui-btn {
+				height: 50px;
+			}
+			.z-price {
+				font-size: 20px
+			}
+			.mui-popover .mui-scroll-wrapper {margin-top: 43px;margin-bottom: 0;}
+			.mui-popover .mui-table-view:after{height: 1px;}
+			
+    </style>
+</head>
+<body>
+	<div class="buywaterMain">
+		<!--头部开始-->
+		<header class="mui-bar mui-bar-nav myheader">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			    <h1 class="mui-title">商品列表</h1>
+		</header>
+		<!--头部结束-->
+		<div class="buywaterCon mui-content mui-row mui-fullscreen">					
+		    <!--分类大盒子-->
+		    <main class="jd_category clearfix">
+		        <!--一级分类-->
+		        <div class="jd_category_left">
+		            <ul class="jd_category_left_con">
+		                <li class="now"><a href="javascript:;">雀巢</a></li>
+		                <li class=""><a href="javascript:;">乐百氏</a></li>
+		                <li class=""><a href="javascript:;">农夫三泉</a></li>
+		                <li class=""><a href="javascript:;">景甜</a></li>
+		                <li class=""><a href="javascript:;">娃哈哈</a></li>
+		                <li class=""><a href="javascript:;">恒大冰泉</a></li>
+		                <li class=""><a href="javascript:;">怡宝</a></li>
+		                <li class=""><a href="javascript:;">香山御泉</a></li>
+		                <li class=""><a href="javascript:;">香山龙井</a></li>
+		                <li class=""><a href="javascript:;">龙泉峡谷</a></li>
+		                <li class=""><a href="javascript:;">饮水机</a></li>
+		            </ul>
+		        </div>
+				<!--二级分类-->
+				<div class="jd_category_right">
+					<!--定义一个大盒子来装我们说有的内容 为了做滑动-->
+					<div class="jd_category_right_con">
+						<div class="mui-table-view">
+							<h2 class="hengtiao">雀巢</h2>
+							<ul>
+								<li data-shop-id = "1" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水1
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min='0' data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" value="0" type="number" />
+										<button data-title="农夫矿泉水1" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+								<li data-shop-id = "2" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水2
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min="0" data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" type="number" value="0" />
+										<button data-title="农夫矿泉水2" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="mui-table-view">
+							<h2 class="hengtiao">乐百氏</h2>
+							<ul>
+								<li data-shop-id = "3" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水1
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min='0' data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" value="0" type="number" />
+										<button data-title="农夫矿泉水1" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+								<li data-shop-id = "4" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水2
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min="0" data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" type="number" value="0" />
+										<button data-title="农夫矿泉水2" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="mui-table-view">
+							<h2 class="hengtiao">农夫三泉</h2>
+							<ul>
+								<li data-shop-id = "5" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水1
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min='0' data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" value="0" type="number" />
+										<button data-title="农夫矿泉水1" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+								<li data-shop-id = "6" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水2
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min="0" data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" type="number" value="0" />
+										<button data-title="农夫矿泉水2" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="mui-table-view">
+							<h2 class="hengtiao">景甜</h2>
+							<ul>
+								<li data-shop-id = "5" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水1
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min='0' data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" value="0" type="number" />
+										<button data-title="农夫矿泉水1" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+								<li data-shop-id = "6" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水2
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min="0" data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" type="number" value="0" />
+										<button data-title="农夫矿泉水2" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="mui-table-view">
+							<h2 class="hengtiao">娃哈哈</h2>
+							<ul>
+								<li data-shop-id = "5" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水1
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min='0' data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" value="0" type="number" />
+										<button data-title="农夫矿泉水1" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+								<li data-shop-id = "6" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水2
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min="0" data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" type="number" value="0" />
+										<button data-title="农夫矿泉水2" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="mui-table-view">
+							<h2 class="hengtiao">恒大冰泉</h2>
+							<ul>
+								<li data-shop-id = "5" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水1
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min='0' data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" value="0" type="number" />
+										<button data-title="农夫矿泉水1" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+								<li data-shop-id = "6" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水2
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min="0" data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" type="number" value="0" />
+										<button data-title="农夫矿泉水2" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="mui-table-view">
+							<h2 class="hengtiao">怡宝</h2>
+							<ul>
+								<li data-shop-id = "5" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水1
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min='0' data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" value="0" type="number" />
+										<button data-title="农夫矿泉水1" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+								<li data-shop-id = "6" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水2
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min="0" data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" type="number" value="0" />
+										<button data-title="农夫矿泉水2" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="mui-table-view">
+							<h2 class="hengtiao">香山御泉</h2>
+							<ul>
+								<li data-shop-id = "5" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水1
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min='0' data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" value="0" type="number" />
+										<button data-title="农夫矿泉水1" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+								<li data-shop-id = "6" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水2
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min="0" data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" type="number" value="0" />
+										<button data-title="农夫矿泉水2" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="mui-table-view">
+							<h2 class="hengtiao">香山龙井</h2>
+							<ul>
+								<li data-shop-id = "5" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水1
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min='0' data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" value="0" type="number" />
+										<button data-title="农夫矿泉水1" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+								<li data-shop-id = "6" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水2
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min="0" data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" type="number" value="0" />
+										<button data-title="农夫矿泉水2" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="mui-table-view">
+							<h2 class="hengtiao">龙泉峡谷</h2>
+							<ul>
+								<li data-shop-id = "5" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水1
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min='0' data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" value="0" type="number" />
+										<button data-title="农夫矿泉水1" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+								<li data-shop-id = "6" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水2
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min="0" data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" type="number" value="0" />
+										<button data-title="农夫矿泉水2" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="mui-table-view">
+							<h2 class="hengtiao">饮水机</h2>
+							<ul>
+								<li data-shop-id = "5" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水1
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min='0' data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" value="0" type="number" />
+										<button data-title="农夫矿泉水1" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+								<li data-shop-id = "6" class="mui-table-view-cell mui-media">
+									<a  href="goods_detail.html">
+										<img class="mui-media-object mui-pull-left" src="../images/01.png">
+										<div class="mui-media-body">
+											农夫矿泉水2
+											<p class='mui-ellipsis'>300ml瓶装矿泉水</p>
+											<p class="price"><span class="money colred"> <em class="smallyuan">&yen;</em>10</span><span class="jiuzhe">9折优惠</span></p>
+										</div>
+									</a>
+									<div class="mui-numbox jiajian" data-numbox-min="0" data-numbox-max='100000'>
+										<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+										<input class="mui-numbox-input" type="number" value="0" />
+										<button data-title="农夫矿泉水2" data-price="10" class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+										<input type="hidden" value="0" />
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+	    	</main> 
+	     </div>
+	   	<nav class="mui-bar mui-bar-tab mui-bar-footer">
+	   		 <ul class="gong gwc clearfix">
+					<li class="mui-table-view-cell">
+						<div id="shopCarList" class="shoppingcar">
+							<i class="icon iconfont">&#xe609;</i>								
+							<span id="shopCarNum" class="mui-badge mui-badge-success">0</span>						
+						</div>	
+						共<span class="colred jg">&yen;<span id="zPrice" class="z-price">0.0</span></span>		
+						<button type="button" class="mui-btn mui-btn-primary" onclick="window.location.href='../order/submitorder_yt.html'">去结算</button>
+					</li>
+			</ul>	
+	   	</nav>
+	
+	<!--点击购物车弹出的内容-->
+	<div id="bottomPopover" class="mui-popover mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell qkall">
+					<span class="qk"><i class="icon iconfont">&#xe611;</i>清空全部</span>
+				</li>
+			</ul>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul id="shopCar" class="mui-table-view qkallParent">
+					</ul>
+				</div>
+			</div>
+		</div>
+	<!--点击购物车弹出的内容结束-->
+	</div>
+	<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/mui/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/myjs.js" type="text/javascript" charset="utf-8"></script>  
+	<script src="../js/common.js"></script>
+	<script src="../js/category.js"></script>
+	<script type="text/javascript">
+		var f = true;
+		var mun = 0;//购物车总数量
+		mui("body").on("tap","#shopCarList",function(){
+			if(f){
+				mui("#bottomPopover").popover("show");
+				$(this).animate({top:"-330px",left:"10px"},20);
+				$(".gwc li").css("margin-left","0");
+				f = false;
+			}else{
+				f = true;
+			}
+		});
+		mui("body").on("tap","div.mui-backdrop",function(e){
+			e.stopPropagation();
+			$("#shopCarList").animate({top:"-30px",left:"-50px"},20)
+			$(".gwc li").css("margin-left","60px");
+		});
+		//清空购物车
+		mui("body").on("tap",".qkall",function(e){
+			//阻止事件冒泡
+			e.stopPropagation();
+			//清空购物车商品列表
+			$("#shopCar").empty();
+			//隐藏遮罩
+			mui("#bottomPopover").popover("hide");
+			$("#shopCarList").animate({top:"-30px",left:"-50px"},20)
+			$(".gwc li").css("margin-left","60px");
+			mun = 0;//购物车计量为0
+			//购物车总计量清零
+			$("#shopCarNum").html("0");
+			//所有商品数量分别为0
+			$(".jd_category_right_con li .mui-numbox-input").val(0);
+			$("#zPrice").html("0.0");//总计(总价格)清零
+			
+		});
+		//创建方法in_array  判断某个对象是否存在数组中
+		Array.prototype.in_array = function(e){  
+			for(i=0;i<this.length;i++)  {  
+				if(this[i] == e)  
+				return true;  
+			}  
+			return false;  
+		} 
+		//增加商品数量--购物车
+		//创建数组 存放添加的商品信息
+		var munArry = new Array();
+		//商品列表增加数量事件
+		mui(".jd_category_right_con").on("tap",".mui-table-view-cell .mui-numbox-btn-plus",function(e){
+			var tempPrice = 0;//单个商品临时总价格
+			var val = parseInt($(this).prev().val());//当前商品数量
+			var price = parseFloat($(this).attr("data-price"));//当前商品价格
+			
+			//shopId商品id 加减时区分是操作哪个商品
+			//注意:每个商品都有一个商品id  在html中将商品id 赋值给自定义属性data-shop-id
+			var shopId = $(this).parent().parent().attr("data-shop-id");
+			++mun;//购物车总数增加
+			//当前商品信息html片段 
+			var shopCarHtm = '<li data-shop-id = "'+shopId+'" class="mui-table-view-cell orderxq yst">'+
+								'<div class="mui-media-body">'+
+									$(this).attr("data-title")+
+									'<span class="money"><em class="smallyuan">&yen;</em>'+price+'</span>'+
+									'<div class="mui-numbox" data-numbox-min="1" data-numbox-max="100000">'+
+										'<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>'+
+										'<input class="mui-numbox-input" type="number" value="1" style="margin-top:-4px" />'+
+										'<button data-price="'+price+'" class="mui-btn mui-numbox-btn-plus" type="button">+</button>'+
+										'<input type="hidden" value="0" />'+
+									'</div>'+
+								'</div>'+
+							'</li>	';
+			//判断数组中是否存在该索引对象 存在则不向购物车中添加数据,否则添加
+			if(!munArry.in_array(shopId)){
+				// 将当前商品html片段 追加到购物车shopCar 对象下
+				$("#shopCar").append(shopCarHtm);
+			}
+			tempPrice = val * price;//单个商品求和
+			//将当前商品总价赋值给当前上下文隐藏文本域中
+			$(this).siblings("input[type=hidden]").val(tempPrice);
+			//将当前商品总价赋值给购物车下 商品id 为shopId的li对象下隐藏文本域中
+			$("#shopCar li[data-shop-id="+shopId+"] input[type=hidden]").val(tempPrice);
+			//改变购物车当前商品id为shopId的商品数量
+			$("#shopCar li[data-shop-id="+shopId+"] .mui-numbox-input").val(val++);
+			//将当前商品的id存入munArry数组中
+			munArry.push(shopId);
+			//更新购物车总计量
+			$("#shopCarNum").html(mun);
+			//初始化动态的numbox组件
+			mui('.mui-numbox').numbox();
+			//更新购物车总价格
+			zPrice(".jd_category_right_con");
+		});
+		//列表 减商品数量事件
+		mui(".jd_category_right_con").on("tap",".mui-table-view-cell .mui-numbox-btn-minus",function(){
+			var val = parseInt($(this).next().val());//当前商品数量
+			var price = parseFloat($(this).siblings(".mui-numbox-btn-plus").attr("data-price"));//当前商品价格
+			--mun;//购物车总计量减少
+			var shopId = $(this).parent().parent().attr("data-shop-id");//当前商品id
+			$(this).siblings("input[type=hidden]").val(val*price);//当前商品总价格
+			//更新购物车当前商品id为shopId 的商品总价格
+			$("#shopCar li[data-shop-id="+shopId+"] input[type=hidden]").val(val*price);
+			//更新购物车当前商品id为shopId的总数量
+			$("#shopCar li[data-shop-id="+shopId+"] .mui-numbox-input").val(val--);
+			//更新购物车总计量
+			$("#shopCarNum").html(mun);
+			//更新购物车总价格
+			zPrice(".jd_category_right_con");
+		});
+		
+		//购物车减少当前商品数量事件
+		mui("#shopCar").on("tap",".mui-table-view-cell .mui-numbox-btn-minus",function(){
+			var val = parseInt($(this).next().val());//当前商品数量
+			var price = parseFloat($(this).siblings(".mui-numbox-btn-plus").attr("data-price"));//当前商品价格
+			--mun;//更新总计量
+			var shopId = $(this).parent().parent().parent().attr("data-shop-id");//当前商品id
+			$(this).siblings("input[type=hidden]").val(val*price);//当前商品总价格
+			//更新商品列表当前商品id为shopId的总价格
+			$(".jd_category_right_con li[data-shop-id="+shopId+"] input[type=hidden]").val(val*price);
+			//更新商品列表当前商品id为shopId的总数量
+			$(".jd_category_right_con li[data-shop-id="+shopId+"] .mui-numbox-input").val(val--);
+			//更新总计量
+			$("#shopCarNum").html(mun);
+			//更新购物车总价格
+			zPrice("#shopCar");
+		});
+		//购物车增加商品数量事件
+		mui("#shopCar").on("tap",".mui-table-view-cell .mui-numbox-btn-plus",function(){
+			var val = parseInt($(this).prev().val());//当前商品数量
+			var price = parseFloat($(this).attr("data-price"));//当前商品价格
+			++mun;
+			//shopId商品id 加减时区分是操作哪个商品
+			//当前商品id
+			var shopId = $(this).parent().parent().parent().attr("data-shop-id");
+			//更新当前商品总价格
+			$(this).siblings("input[type=hidden]").val(val*price);
+			//更新商品列表当前商品id为shopId的总价格
+			$(".jd_category_right_con li[data-shop-id="+shopId+"] input[type=hidden]").val(val*price);
+			//更新商品列表当前商品id为shopId的总数量
+			$(".jd_category_right_con li[data-shop-id="+shopId+"] .mui-numbox-input").val(val++);
+			//更新总计量
+			$("#shopCarNum").html(mun);
+			//更新购物车总价格
+			zPrice("#shopCar");
+		});
+		//总价格计算方法 boxObj 为当前父对象 用于区分是商品列表还是购物车
+		function zPrice(boxObj){
+			var zPrice = 0;//总价格
+			//循环所有的隐藏文本域 得到所有当前商品总价格
+			$(""+boxObj+" .mui-table-view-cell input[type=hidden]").each(function(i,v){
+				if($(v).val()!=""||$(v).val()!=undefined){
+					//价格求和
+					zPrice+=parseFloat($(v).val());
+				}
+			});
+			//价格总和 保留一位小数
+			$("#zPrice").html(zPrice.toFixed(1));
+		}
+		
+	</script>
+</body>
+</html>

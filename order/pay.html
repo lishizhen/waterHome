@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>去支付</title>
+    <link rel="stylesheet" href="../css/mui.min.css" />
+    <link rel="stylesheet" href="../iconfont/iconfont.css" />
+    <link rel="stylesheet" href="../css/css.css" />
+    <script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/myjs.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="pay order">
+		<header class="mui-bar mui-bar-nav myheader">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			    <h1 class="mui-title">去支付</h1>
+		</header>
+		<div class="sendPeople mui-content">
+			<ul class="mui-table-view marginT orderCon clearfix">
+				<li class="mui-table-view-cell orderpay">
+						<p class="orderTime">实付款: <span class="money colred"> <em class="smallyuan colred">&yen;</em>37.5</span></p>					
+						<p class="weixinpay colhui">请支付</p>
+				</li>
+				<li class="mui-table-view-cell fg"></li>
+			</ul>
+			<div class="mui-card">
+				<form class="mui-input-group">
+					<div class="mui-input-row mui-radio">
+						<label class="zfb"><i class="icon iconfont">&#xe606;</i>支付宝支付</label>
+						<input name="radio1" type="radio">
+					</div>
+					<div class="mui-input-row mui-radio">
+						<label class="weixin"><i class="icon iconfont">&#xe605;</i>微信支付</label>
+						<input name="radio1" type="radio" >
+					</div>
+				</form>
+			</div>		
+		</div>
+		<div class="aginbuy clearfix">
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block">确认支付</button>
+		</div>
+	</div>
+</body>
+</html>
